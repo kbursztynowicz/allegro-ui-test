@@ -1,0 +1,19 @@
+This basic GUI-automation framework utilises mainly Java8, TestNG, AssertJ, Maven and remote webdriver manager.
+
+Framework structure is divided into three main parts: objects, actions and tests. I was considering addition of another layer
+ in order to be consistent with given-when-then methodology (test shall consist of three steps), however in case of such a
+ small framework with little number of tests, it would be unnecessary complication of code.
+
+objects.AlegroPageLocators contain selectors as By objects, that are used for further WebElements localization. I did not decide
+ to use WebElement objects as selectors in order to avoid encountering StaleElementReferenceException; sometimes driver initializes
+ elements in the beginning of a test and if they change dynamically, driver still refers to their older version.
+
+actions package consists of two classes with test actions; an abstract one contains more framework-common methods,
+ such as WebDriver and WebDriverWait initialization etc. AllegroPageAction class contains just test specific methods.
+
+tests package has defined testNG test methods with proper annotations.
+
+Name of the searched item and min price can be defined in the daraProvider method in ConfigurationUITests.class
+Main page URL can be defined in the testNGRunner.xml file as a parameter.
+
+In order to run the test right-click on the testNGRunner.xml, and select 'Run' from the context menu.

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="tests.AllegroUITest">
+        <methods>
+          <include name="testTearDown"/>
+          <include name="should_basket_contain_selected_item"/>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- tests.AllegroUITest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

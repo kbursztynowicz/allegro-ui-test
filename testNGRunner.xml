@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="GUI_automation">
+    <test name="should_basket_contain_selected_item">
+        <parameter name="baseURL" value="https://allegro.pl"></parameter>
+        <classes>
+            <class name="tests.AllegroUITest"></class>
+        </classes>
+    </test>
+</suite>
